@@ -1,7 +1,7 @@
 {
   "name": "2g-chatbot",
   "dependencies": {
-    "cohere-ai": "^5.1.1"
+    "cohere-ai": "^4.11.1"
   },
   "version": "1.0.0",
   "main": "index.js",
