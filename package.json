@@ -1,0 +1,6 @@
+{
+  "name": "2g-chatbot",
+  "dependencies": {
+    "cohere-ai": "^5.1.1"
+  }
+}
