@@ -1,5 +1,8 @@
-const cohere = require('cohere-ai');
-cohere.init(process.env.COHERE_API_KEY);
+import { CohereClient } from 'cohere-ai';
+
+const cohere = new CohereClient({
+  token: process.env.COHERE_API_KEY,
+});
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -9,16 +12,15 @@ export default async function handler(req, res) {
   const { question } = req.body;
 
   try {
-    const response = await cohere.generate({
-      model: 'command-r-plus',
-      prompt: question,
-      max_tokens: 60,
-      temperature: 0.7,
+    const response = await cohere.chat({
+      model: 'command',
+      message: question,
     });
 
-    const answer = response.body.generations[0].text.trim();
+    const answer = response.text.trim();
     res.status(200).json({ answer });
   } catch (err) {
+    console.error(err);
     res.status(500).json({ answer: 'Error generating response.' });
   }
 }
