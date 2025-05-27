@@ -2,5 +2,22 @@
   "name": "2g-chatbot",
   "dependencies": {
     "cohere-ai": "^5.1.1"
-  }
+  },
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphachegeke/2G-AI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphachegeke/2G-AI/issues"
+  },
+  "homepage": "https://github.com/raphachegeke/2G-AI#readme",
+  "description": ""
 }
